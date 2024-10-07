@@ -1,0 +1,13 @@
+Hi, I am team leader
+
+Team Member-1
+  -clown this repostri 
+  -add html,css,js files
+  -stage, commit, and push
+  -give pull request
+
+Team Member-2
+  -clown this repostri 
+  -add backend files
+  -stage, commit, and push
+  -give pull request
