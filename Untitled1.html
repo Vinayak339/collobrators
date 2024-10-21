@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.title }} Showtimes</title>
+</head>
+<body>
+    <h1>Showtimes for {{ movie.title }}</h1>
+    <form action="/select_showtime" method="post">
+        <ul>
+            {% for time in movie.showtimes %}
+                <li>
+                    <input type="radio" name="showtime_index" value="{{ loop.index0 }}" required>
+                    {{ time }}
+                </li>
+            {% endfor %}
+        </ul>
+        <input type="hidden" name="movie_title" value="{{ movie.title }}">
+        <button type="submit">Select Showtime</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+</head>
+<body>
+    <h1>Booking for {{ movie.title }} at {{ showtime }}</h1>
+    <form action="/book_ticket" method="post">
+        <input type="hidden" name="movie_title" value="{{ movie.title }}">
+        <input type="hidden" name="showtime" value="{{ showtime }}">
+        <label for="tickets">Enter number of tickets:</label>
+        <input type="number" name="tickets" min="1" required>
+        <button type="submit">Book Ticket</button>
+    </form>
+</body>
+</html>
